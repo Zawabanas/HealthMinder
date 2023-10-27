@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:healthminder="clr-namespace:HealthMinder"
+             x:Class="HealthMinder.Views.AccLoginPage">
+    <ContentPage.Content>
+        <StackLayout Background="White">
+
+            <StackLayout>
+
+                <Image Source="healthMinder_LogoLargo.png" 
+                BackgroundColor="White"
+                Aspect="AspectFit" 
+                WidthRequest="150" 
+                HeightRequest="150" 
+                HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+
+            <Grid RowSpacing="15" RowDefinitions="Auto,Auto,Auto,Auto">
+                <StackLayout Grid.Row="4">
+                    <Label Text="INICIAR SESION"
+                    FontSize="25"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    FontAttributes="Bold"
+             ></Label>
+                    <Frame BorderColor="Black"
+                    BackgroundColor="Transparent"
+                    Margin="15"
+                    Padding="0"
+                    CornerRadius="50">
+                        <Frame BorderColor="Black"
+                        BackgroundColor="Transparent"
+                        Margin="1"
+                        Padding="25,0,25,0"
+                        HeightRequest="60"
+                        CornerRadius="50">
+                            <healthminder:CustomEntry TextColor="Black"
+                            FontSize="18"
+                            Placeholder="Correo"
+                            PlaceholderColor="Gray"/>
+                        </Frame>
+                    </Frame>
+                    <Frame BorderColor="Black"
+                    BackgroundColor="Transparent"
+                    Margin="15"
+                    Padding="0"
+                    CornerRadius="50">
+                        <Frame BorderColor="Black"
+                        BackgroundColor="Transparent"
+                        Margin="1"
+                        Padding="25,0,25,0"
+                        HeightRequest="60"
+                        CornerRadius="50">
+                            <healthminder:CustomEntry TextColor="Black"
+                            FontSize="18"
+                            Placeholder="Contraseña"
+                            PlaceholderColor="Gray"
+                            IsPassword="True"
+                            x:Name="EntryPassword"/>
+                        </Frame>
+                    </Frame>
+                    <RelativeLayout Padding="25">
+                        <CheckBox Color="Black"
+                           IsChecked="False"
+                           CheckedChanged="CheckBox_CheckedChanged"
+                           x:Name="Checkbox"
+                           Margin="15,0,0,0"/>
+                        <Label Text="Mostrar Contraseña"
+                        TextColor="Black"
+                        FontSize="18"
+                        RelativeLayout.XConstraint="50"
+                        RelativeLayout.YConstraint="3"/>
+                    </RelativeLayout>
+                    <Button
+                 x:Name="SignUpButton"
+                 Text="Registrarse"
+                 TextColor="White"
+                 BorderWidth="2"
+                 BorderColor="Black"
+                 Margin="10,0,10,0"
+                 FontSize="18"
+                 Clicked="SignUpButton_Clicked"
+                 HeightRequest="50"
+                 CornerRadius="60"
+                 BackgroundColor="Black"/>
+                    <Button
+                 x:Name="LoginButton"
+                 Text="Iniciar Sesión"
+                 TextColor="White"
+                 BorderWidth="2"
+                 BorderColor="Black"
+                 Margin="10,0,10,0"
+                 FontSize="18"
+                 Clicked="LoginButton_Clicked"
+                 HeightRequest="50"
+                 CornerRadius="60"
+                 BackgroundColor="Black"/>
+                    <Button x:Name="ForgotPasswordButton"
+                 Text="¿Olvidaste la contraseña?"
+                 TextColor="Black"
+                 FontSize="15"
+                 BackgroundColor="Transparent"
+                 RelativeLayout.XConstraint="100"
+                 RelativeLayout.YConstraint="150"
+                 Clicked="ForgotPasswordButton_Clicked"
+                 TextTransform="None"/>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
